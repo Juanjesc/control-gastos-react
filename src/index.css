@@ -184,8 +184,16 @@ header h1 {
 }
 .formulario input[type="text"].nuevo-presupuesto, 
 .formulario input[type="number"].nuevo-presupuesto {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+}
+@media (min-width: 768px) { 
+.formulario input[type="text"].nuevo-presupuesto, 
+.formulario input[type="number"].nuevo-presupuesto {
     font-size: 2.8rem;
     text-align: center;
+}
 }
 
 .contenedor-presupuesto svg {
@@ -323,8 +331,15 @@ main {
 
 .nuevo-gasto {
     position: fixed;
-    bottom: 5rem;
-    right: 5rem;
+    bottom: 1rem;
+    right: 1rem;
+}
+@media (min-width: 768px) { 
+    .nuevo-gasto {
+        position: fixed;
+        bottom: 5rem;
+        right: 5rem;
+    }
 }
 
 .nuevo-gasto img {
@@ -348,6 +363,7 @@ main {
     top: 3rem;
     width: 3rem;
     height: 3rem;
+    z-index: 5;
 }
 .modal .cerrar-modal img {
     width: 100%;
@@ -355,11 +371,16 @@ main {
 
 .modal .formulario {
     max-width: 80rem;
-    width: 40rem;
+    width: 90%;
     transition-property: all;
     transition-duration: 300ms;
     transition-timing-function: ease-in;
     opacity: 0;
+}
+@media (min-width: 768px) { 
+    .modal .formulario{
+        width: 40rem;
+    }
 }
 .modal label {
     color: var(--blanco);
